@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Games</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="../scripts/games.js" type="module" defer></script>
+    <script src="../scripts/browse.js" type="module" defer></script>
+    <style>
+        /* Add a gradient background */
+        body {
+            background: linear-gradient(to bottom, #1e293b, #334155);
+            color: #f8fafc;
+        }
+
+        /* Navigation hover effect */
+        nav a {
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #38bdf8; /* Light blue */
+            transform: scale(1.1);
+        }
+
+        /* Cart badge styles */
+        .cart-badge {
+            background: #38bdf8;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            position: absolute;
+            top: -5px;
+            right: -10px;
+        }
+
+        /* Game card hover effect */
+        .game {
+            background: #1e293b;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .game:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-image {
+            transition: transform 0.3s ease;
+        }
+
+        .game-image:hover {
+            transform: scale(1.1);
+        }
+
+        /* Filter dropdowns */
+        select {
+            background: #1e293b;
+            color: #f8fafc;
+            border: 1px solid #64748b;
+            transition: border-color 0.3s ease;
+        }
+
+        select:focus {
+            border-color: #38bdf8;
+            outline: none;
+        }
+
+        /* Button styles */
+        .btn {
+            background: #38bdf8;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-gray-800 text-white text-center py-4">
+        <h1 class="text-3xl font-bold">🎮 Pisces Hub 🎮</h1>
+    </header>
+
+    <nav class="bg-gray-700 text-white p-4 relative">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="../../pages/assests/images/image.html">HTML Image Tag</a></li>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../about/about.html">About Us</a></li>
+            <li><a href="../contact/contact.html">Contact Us</a></li>
+            <li><a href="../../../src/pages/catalog/catalog.html">Catalog</a></li>
+            <li><a href="../catalog/preorderform.html">Preorder Form</a></li>
+            <li><a href="../catalog/GameDescription.html">Game Description</a></li>
+            <li><a href="../BrowseGames/browse.html" class="hover:underline">Browse Games</a></li>
+        </ul>
+        <div class="absolute top-4 right-4">
+            <button class="relative flex items-center space-x-2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-600 transition duration-300">
+                <span class="text-xl">🛒</span>
+                <span class="font-bold">Cart</span>
+                <span id="cart-count" class="cart-badge bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    0
+                </span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-8">
+        <!-- Filters Section -->
+        <div class="flex justify-between items-center mb-4">
+            <div>
+                <label for="genre" class="mr-2">Filter by Genre:</label>
+                <select id="genre" class="p-2 rounded">
+                    <option value="">All</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="RPG">RPG</option>
+                    <option value="Shooter">Shooter</option>
+                    <option value="Action-Adventure">Action-Adventure</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Sandbox">Sandbox</option>
+                </select>
+            </div>
+            <div>
+                <label for="platform" class="mr-2">Filter by Platform:</label>
+                <select id="platform" class="p-2 rounded">
+                    <option value="">All</option>
+                    <option value="PC">PC</option>
+                    <option value="PlayStation">PlayStation</option>
+                    <option value="Xbox">Xbox</option>
+                </select>
+            </div>
+            <div>
+                <button id="sort-rating" class="btn">Sort by Rating</button>
+            </div>
+        </div>
+
+        <!-- Total Cart Price -->
+        <div class="text-right mb-4">
+            <span class="text-lg font-bold">Total Cart Price: $<span id="total-cart-price">0.00</span></span>
+        </div>
+
+        <!-- Games Container -->
+        <div id="games-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Games will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2025 Pisces Hub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

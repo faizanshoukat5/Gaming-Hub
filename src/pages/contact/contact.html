@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        nav {
+            background-color: #333; /* Equivalent to bg-gray-700 */
+            color: white; /* Equivalent to text-white */
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        nav .search-container {
+            display: flex;
+        }
+        nav .search-container input[type="text"] {
+            padding: 5px;
+            font-size: 17px;
+            border: none;
+        }
+        nav .search-container button {
+            padding: 5px 10px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        nav .search-container button:hover {
+            background: #ccc;
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            nav .search-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav .search-container input[type="text"],
+            nav .search-container button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            margin: 10px 0;
+        }
+        .social-icons img {
+            width: 24px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-gray-800 text-white text-center py-4">
+        <h1 class="text-3xl font-bold">🎮 Pisces Hub 🎮</h1>
+    </header>
+
+    <nav>
+        <div class="logo">Pisces Hub</div>
+        <ul>
+            <li><a href="../../pages/assests/images/image.html">HTML Image Tag</a></li>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../about/about.html">About Us</a></li>
+            <li><a href="../contact/contact.html">Contact Us</a></li>
+            <li><a href="../../../src/pages/catalog/catalog.html">Catalog</a></li>
+            <li><a href="../catalog/preorderform.html">Preorder Form</a></li>
+            <li><a href="../catalog/GameDescription.html">Game Description</a></li>
+            <li><a href="../BrowseGames/browse.html" class="hover:underline">Browse Games</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search..">
+            <button type="submit">Search</button>
+        </div>
+    </nav>
+
+    <main id="contact" class="container mx-auto p-8">
+        <h2 class="text-4xl font-bold text-center mb-8">Contact Us</h2>
+        <p class="text-lg mb-8 text-center">If you have any questions, feel free to reach out to us.</p>
+        
+        <section class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Email</h3>
+            <p class="mb-4"><a href="mailto:PiscesHub@uol.com" class="text-blue-500 hover:underline">PiscesHub@uol.com</a></p>
+        </section>
+    
+        <section class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Phone</h3>
+            <p class="mb-4"><a href="tel:+1234567890" class="text-blue-500 hover:underline">+0(101) 786-01</a></p>
+        </section>
+    
+        <section class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Address</h3>
+            <p class="mb-4">F Block Gulberg, Lahore</p>
+        </section>
+    
+        <section class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Follow Us</h3>
+            <div class="flex justify-center space-x-4">
+                <a href="https://facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="w-8 h-8"></a>
+                <a href="https://twitter.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter" class="w-8 h-8"></a>
+                <a href="https://instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="w-8 h-8"></a>
+            </div>
+        </section>
+    
+        <section class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h3 class="text-2xl font-semibold mb-4">Contact Form</h3>
+            <form action="submit_form.php" method="POST" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-lg font-medium">Name:</label>
+                    <input type="text" id="name" name="name" required class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div>
+                    <label for="email" class="block text-lg font-medium">Email:</label>
+                    <input type="email" id="email" name="email" required class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div>
+                    <label for="phone" class="block text-lg font-medium">Phone:</label>
+                    <input type="number" name="phone" id="phone" required class="w-full p-2 border border-gray-300 rounded">
+                </div>
+                <div>
+                    <label for="message" class="block text-lg font-medium">Message:</label>
+                    <textarea id="message" name="message" rows="4" required class="w-full p-2 border border-gray-300 rounded"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="w-8 h-8 inline"></a>
+            <a href="https://twitter.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter" class="w-8 h-8 inline"></a>
+        </div>
+        <p>
+            <a href="../../../index.html">Home</a> |
+            <a href="../about/about.html">About Us</a> |
+            <a href="../contact/contact.html">Contact Us</a>
+        </p>
+        <p>&copy; 2025 Pisces Hub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

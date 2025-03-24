@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Pre-Order Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        nav {
+            background-color: #333; /* Equivalent to bg-gray-700 */
+            color: white; /* Equivalent to text-white */
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        nav .search-container {
+            display: flex;
+        }
+        nav .search-container input[type="text"] {
+            padding: 5px;
+            font-size: 17px;
+            border: none;
+        }
+        nav .search-container button {
+            padding: 5px 10px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        nav .search-container button:hover {
+            background: #ccc;
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            nav .search-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav .search-container input[type="text"],
+            nav .search-container button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            margin: 10px 0;
+        }
+        .social-icons img {
+            width: 24px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="text-center py-4 bg-gray-800 text-white text-2xl">🎮 Pisces Hub 🎮</header>
+
+    <nav>
+        <div class="logo">Pisces Hub</div>
+        <ul>
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../assests/images/image.html">HTML Image Tag</a></li>
+            <li><a href="../about/about.html">About Us</a></li>
+            <li><a href="../contact/contact.html">Contact Us</a></li>
+            <li><a href="../catalog/catalog.html">Catalog</a></li>
+            <li><a href="../catalog/preorderform.html">Preorder Form</a></li>
+            <li><a href="../catalog/GameDescription.html">Game Description</a></li>
+            <li><a href="../BrowseGames/browse.html" class="hover:underline">Browse Games</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search..">
+            <button type="submit">Search</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-8">
+        <h2 class="text-4xl font-bold text-center mb-8">Game Pre-Order Form</h2>
+
+        <form action="submit_order.php" method="post" class="bg-white shadow-md rounded-lg p-6 mb-8 space-y-4">
+            <div>
+                <label for="game" class="block text-lg font-medium">Select Game:</label>
+                <select id="game" name="game" class="w-full p-2 border border-gray-300 rounded">
+                    <option value="gta5">Grand Theft Auto V</option>
+                    <option value="eldenring">Elden Ring</option>
+                    <option value="fifa24">FIFA 24</option>
+                    <option value="codmw3">Call of Duty: Modern Warfare 3</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="platform" class="block text-lg font-medium">Select Platform:</label>
+                <select id="platform" name="platform" class="w-full p-2 border border-gray-300 rounded">
+                    <option value="pc">PC</option>
+                    <option value="ps5">PlayStation 5</option>
+                    <option value="xbox">Xbox Series X</option>
+                </select>
+            </div>
+
+            <div>
+                <label class="block text-lg font-medium">Delivery Method:</label>
+                <div class="space-y-2">
+                    <div>
+                        <input type="radio" id="digital" name="delivery" value="digital" class="mr-2">
+                        <label for="digital">Digital Download</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="physical" name="delivery" value="physical" class="mr-2">
+                        <label for="physical">Physical Copy</label>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <label for="email" class="block text-lg font-medium">Email:</label>
+                <input type="email" id="email" name="email" required class="w-full p-2 border border-gray-300 rounded">
+            </div>
+
+            <div>
+                <label for="address" class="block text-lg font-medium">Address:</label>
+                <textarea id="address" name="address" rows="3" required class="w-full p-2 border border-gray-300 rounded"></textarea>
+            </div>
+
+            <div>
+                <label for="message" class="block text-lg font-medium">Additional Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Any special instructions?" class="w-full p-2 border border-gray-300 rounded"></textarea>
+            </div>
+
+            <div>
+                <input type="submit" value="Pre-Order Now" class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+            </div>
+        </form>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="w-8 h-8 inline"></a>
+            <a href="https://twitter.com" target="_blank"><img src="data:image/jpeg;base64,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" alt="Twitter" class="w-8 h-8 inline"></a>
+        </div>
+        <p>
+            <a href="../../../index.html">Home</a> |
+            <a href="../about/about.html">About Us</a> |
+            <a href="../contact/contact.html">Contact Us</a>
+        </p>
+        <p>&copy; 2025 Pisces Hub. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
+

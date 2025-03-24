@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pisces Hub - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8fafc;
+        }
+
+        .hero {
+            background-image: url('https://images.wallpapersden.com/image/wxl-valorant-hd-gaming_81437.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .category-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .testimonial-card {
+            background: #1e293b;
+            color: white;
+            border-radius: 8px;
+            padding: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="bg-gray-800 text-white text-center py-4">
+        <h1 class="text-3xl font-bold">🎮 Welcome to Pisces Hub 🎮</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-gray-700 text-white p-4 flex justify-between items-center">
+        <div class="logo text-xl font-bold">Pisces Hub</div>
+        <ul class="flex space-x-4">
+            <li><a href="./index.html" class="hover:underline">Home</a></li>
+            <li><a href="./src/pages/about/about.html" class="hover:underline">About Us</a></li>
+            <li><a href="./src/pages/contact/contact.html" class="hover:underline">Contact Us</a></li>
+            <li><a href="./src/pages/catalog/catalog.html" class="hover:underline">Catalog</a></li>
+            <li><a href="./src/pages/BrowseGames/browse.html" class="hover:underline">Browse Games</a></li>
+        </ul>
+        <div class="search-container flex">
+            <input type="text" placeholder="Search games..." class="p-2 border border-gray-300 rounded-l">
+            <button class="p-2 bg-blue-500 text-white rounded-r hover:bg-blue-600">Search</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="text-center">
+            <h2 class="text-5xl font-bold mb-4">Discover the Latest Games</h2>
+            <p class="text-xl mb-6">Explore the best deals, new arrivals, and pre-orders!</p>
+            <a href="./src/pages/catalog/catalog.html" class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition duration-300">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="container mx-auto mt-8">
+        <h2 class="text-2xl font-bold mb-4 text-center">Categories</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="category-card bg-gray-800 text-white p-4 rounded text-center">
+                <h3 class="text-xl font-bold">PC</h3>
+            </div>
+            <div class="category-card bg-gray-800 text-white p-4 rounded text-center">
+                <h3 class="text-xl font-bold">PlayStation</h3>
+            </div>
+            <div class="category-card bg-gray-800 text-white p-4 rounded text-center">
+                <h3 class="text-xl font-bold">Xbox</h3>
+            </div>
+            <div class="category-card bg-gray-800 text-white p-4 rounded text-center">
+                <h3 class="text-xl font-bold">Nintendo</h3>
+            </div>
+            <div class="category-card bg-gray-800 text-white p-4 rounded text-center">
+                <h3 class="text-xl font-bold">Accessories</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Games Section -->
+    <section class="container mx-auto mt-8">
+        <h2 class="text-2xl font-bold mb-4 text-center">Featured Games</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-gray-800 text-white p-4 rounded">
+                <h3 class="text-xl font-bold">The Legend of Zelda</h3>
+                <p>Platform: Nintendo</p>
+                <p>Price: $59.99</p>
+            </div>
+            <div class="bg-gray-800 text-white p-4 rounded">
+                <h3 class="text-xl font-bold">Elden Ring</h3>
+                <p>Platform: PC</p>
+                <p>Price: $59.99</p>
+            </div>
+            <div class="bg-gray-800 text-white p-4 rounded">
+                <h3 class="text-xl font-bold">Call of Duty: Modern Warfare 3</h3>
+                <p>Platform: Xbox</p>
+                <p>Price: $69.99</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials -->
+    <section class="container mx-auto mt-8">
+        <h2 class="text-2xl font-bold mb-4 text-center">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="testimonial-card">
+                <p>"Pisces Hub has the best collection of games. Highly recommend!"</p>
+                <p class="mt-2 font-bold">- John Doe</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"Amazing deals and fast delivery. My go-to gaming store!"</p>
+                <p class="mt-2 font-bold">- Jane Smith</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="w-8 h-8 inline"></a>
+            <a href="https://twitter.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg" alt="Twitter" class="w-8 h-8 inline"></a>
+        </div>
+        <p>&copy; 2025 Pisces Hub. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Image Tag</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        nav {
+            background-color: #333; /* Equivalent to bg-gray-700 */
+            color: white; /* Equivalent to text-white */
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        nav .search-container {
+            display: flex;
+        }
+        nav .search-container input[type="text"] {
+            padding: 5px;
+            font-size: 17px;
+            border: none;
+        }
+        nav .search-container button {
+            padding: 5px 10px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        nav .search-container button:hover {
+            background: #ccc;
+        }
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+            nav .search-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav .search-container input[type="text"],
+            nav .search-container button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            margin: 10px 0;
+        }
+        .social-icons img {
+            width: 24px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="text-center py-4 bg-gray-800 text-white text-2xl">🎮 Pisces Hub 🎮</header>
+
+    <nav>
+        <div class="logo">Pisces Hub</div>
+        <ul>
+            <li><a href="../../../../index.html">Home</a></li>
+            <li><a href="../images/image.html">HTML Image Tag</a></li>
+            <li><a href="../../about/about.html">About Us</a></li>
+            <li><a href="../../contact/contact.html">Contact Us</a></li>
+            <li><a href="../../catalog/catalog.html">Catalog</a></li>
+            <li><a href="../../catalog/preorderform.html">Preorder Form</a></li>
+            <li><a href="../../catalog/GameDescription.html">Game Description</a></li>
+            <li><a href="../../BrowseGames/browse.html" class="hover:underline">Browse Games</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" placeholder="Search..">
+            <button type="submit">Search</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-8">
+        <h2 class="text-4xl font-bold text-center mb-8">HTML Image Tag</h2>
+        
+        <figure class="mb-8">
+            <img src="https://files.oaiusercontent.com/file-5ydXgPYPFgjUhN23Tz3GtS?se=2025-03-04T18%3A41%3A56Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D45d22c9e-bf4c-4722-8b3b-7f77784bd8ed.webp&sig=WmNYxBzG00czkV4RmrpDZuqhqDoBXpuGScyKBQhLOuI%3D" alt="description of image" width="290" class="mx-auto">
+            <figcaption class="text-center mt-2">Description of image</figcaption>
+        </figure>
+
+        <figure>
+            <img src="https://files.oaiusercontent.com/file-VfJxmrWRFcHLYRpK1VEHh4?se=2025-03-04T18%3A41%3A56Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dcec6b69c-db8f-4282-8448-9fe515e7817d.webp&sig=srGSw5T2jFXT%2BPOXJO3ugGx8F838Pzr8s8rH8IVnLik%3D" alt="description of image" width="290" class="mx-auto">
+            <figcaption class="text-center mt-2">Description of image</figcaption>
+        </figure>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" class="w-8 h-8 inline"></a>
+            <a href="https://twitter.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter" class="w-8 h-8 inline"></a>
+        </div>
+        <p>
+            <a href="../../../../index.html">Home</a> |
+            <a href="../../about/about.html">About Us</a> |
+            <a href="../../contact/contact.html">Contact Us</a>
+        </p>
+        <p>&copy; 2025 Pisces Hub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
